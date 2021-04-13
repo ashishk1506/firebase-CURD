@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+</head>
+<body>
+    <h1>Google Analytics Demo</h1>
+    <form>
+       <input type='text' placeholder="name" name="name">
+       <input type='text' placeholder="city" name="city">
+       <button> submit</button>
+    </form>
+    <p id="gfg"></p>
+    
+    <button id='where'>Where</button>
+    <button id='orderBy'>orderBy</button>
+
+    <ul>
+   
+    </ul>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: config.apiKey,
+    authDomain: config.authDomain,
+    projectId: config.projectId,
+    storageBucket: config.storageBucket,
+    messagingSenderId: config.messagingSenderId,
+    appId: config.appId,
+    measurementId: config.measurementId
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+  const db = firebase.firestore()
+  db.settings({ timestampsInSnapshots: true })
+
+</script>
+<script type='text/javascript' src='config.js'></script>
+<script src="app.js"></script>
+</body>
+</html>
